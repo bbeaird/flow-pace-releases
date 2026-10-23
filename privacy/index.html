@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:,">
+<title>Flow Pace Privacy Policy</title>
+<style>
+:root {
+  --bg: #ffffff;
+  --text: #1d1d1f;
+  --muted: #5f6368;
+  --line: #e3e3e6;
+  --code-bg: #f2f2f5;
+  --link: #0a5bc4;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #161618;
+    --text: #ececef;
+    --muted: #a1a1a8;
+    --line: #2e2e33;
+    --code-bg: #26262b;
+    --link: #79afff;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+main { max-width: 40rem; margin: 0 auto; padding: 40px 16px 64px; }
+h1 { font-size: 1.75rem; line-height: 1.2; margin: 0 0 6px; }
+h2 { font-size: 1.15rem; margin: 32px 0 8px; padding-top: 20px; border-top: 1px solid var(--line); }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 1.2em; }
+li { margin-bottom: 6px; }
+.meta { color: var(--muted); font-size: 0.95rem; margin-bottom: 24px; }
+code {
+  font: 0.88em/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  background: var(--code-bg);
+  padding: 1px 5px;
+  border-radius: 4px;
+  overflow-wrap: anywhere;
+}
+a { color: var(--link); overflow-wrap: anywhere; }
+</style>
+</head>
+<body>
+<main>
+<h1>Flow Pace Privacy Policy</h1>
+<p class="meta">Effective 2026-10-23 · Developer: Brantley Beaird</p>
+
+<h2>What stays on this Mac</h2>
+<ul>
+<li>Microphone audio is analyzed in memory and never saved.</li>
+<li>Speech is recognized by Apple’s on-device recognizer. Flow Pace requires on-device recognition and has no cloud fallback.</li>
+<li>Session numbers (word counts, timings and your review labels) are saved in <code>~/Library/Application Support/<wbr>com.brantleybeaird.flowpace/</code>. Settings and recent error codes are saved in the app’s preferences.</li>
+<li>Transcripts are saved only if you turn on Keep transcripts for calibration. It is off by default.</li>
+<li>To tell dictation from Notetaker, Flow Pace reads Wispr Flow’s process, microphone and window state on this Mac, never your dictated text.</li>
+<li>CSV exports go only where you save them.</li>
+</ul>
+
+<h2>Usage analytics</h2>
+<p>Usage analytics are on by default. On a new install, nothing is sent before the setup step has been shown. Flow Pace sends these events to Segment, which forwards them to Google Analytics:</p>
+<ul>
+<li><code>app_opened</code>: once per launch, and when you turn usage stats back on.</li>
+<li><code>screen_view</code>: when the dashboard appears, with <code>screen_name</code> “dashboard”.</li>
+<li><code>comparison_exported</code> or <code>comparison_export_failed</code>: when a CSV export succeeds or fails.</li>
+</ul>
+<p>Each event also carries <code>app</code> (“flow-pace”), <code>platform</code> (“macos”), <code>app_version</code>, <code>environment</code> (“production”), <code>session_id</code> (the time the app started or usage stats were turned back on), <code>engagement_time_msec</code> (always 1), an event ID and a timestamp.</p>
+<p>Each event includes a random identifier. It is created when the app starts, kept only in memory, and replaced when you turn usage stats off and on. Events from one launch share it, so they can be linked to each other.</p>
+<p>Segment and Google Analytics see the IP address of the requests they receive. Flow Pace sets the IP field inside each event to 0.0.0.0. It never sends audio, transcripts, pace numbers, file names, or device or advertising IDs.</p>
+<p>To turn it off, untick “Shares anonymous usage stats.” in the setup step, or turn off Share usage stats in Details › Settings. This stops future sends. It does not delete events already sent.</p>
+<p>Privacy policies: <a href="https://www.twilio.com/en-us/legal/privacy">Segment (Twilio)</a> and <a href="https://policies.google.com/privacy">Google</a>.</p>
+
+<h2>Other network connections</h2>
+<p>None. Flow Pace has no update checks, accounts, ads, or AI, cloud or lookup services. The Privacy Policy link in Settings opens this page in your browser.</p>
+
+<h2>Contact</h2>
+<p>Open an issue at <a href="https://github.com/bbeaird/flow-pace-releases/issues">https://github.com/bbeaird/flow-pace-releases/issues</a>. Issues are public, so leave out private details.</p>
+</main>
+</body>
+</html>
